@@ -424,7 +424,7 @@ class Job:
                         f"Attempted to parse {file_path}, but it doesn't seem to be a JUnit results file.",
                     )
                     continue
-
+                continue
                 step = os.path.basename(os.path.dirname(file_path))
                 for suite in junit_xml:
                     for case in suite:
@@ -486,5 +486,9 @@ class Job:
                     failed_test_junit_path=failure["failed_test_junit_path"],
                 ),
             )
-
+        if not failures:
+            exit()
+        else:
+            import ipdb
+            ipdb.set_trace()
         return failures
