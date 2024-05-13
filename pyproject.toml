@@ -29,7 +29,7 @@ Download = "https://github.com/CSPI-QE/firewatch"
 firewatch = "src.cli:main"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 click = "^8.1.7"
 google-cloud-storage = "^2.10.0"
 jinja2 = "^3.1.2"
@@ -37,6 +37,7 @@ jira = "^3.5.2"
 junitparser = "^3.1.0"
 python-simple-logger = "^1.0.6"
 ipdb = "*"
+pandas = "^2.2.2"
 
 [tool.poetry.group.dev.dependencies]
 tox = "^4.11.4"
